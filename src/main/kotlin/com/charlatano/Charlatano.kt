@@ -45,6 +45,22 @@ const val SETTINGS_DIRECTORY = "settings"
 fun main(args: Array<String>) {
 	System.setProperty("kotlin.compiler.jar", "kotlin-compiler.jar")
 	
+	//Tabbing out when you are ingame got annoying.
+	//You now have to hold f12 to start the loading process. 
+	//Its more convinient
+	
+	var start = false
+	
+	System.out.println("F12 to start")
+	while(start == false) {	
+		//123 = keycode for f12. Change to what you like
+		if(keyPressed(123)){
+		start = true;
+		}
+		Thread.sleep(1000)
+	}
+	System.out.println("Starting")
+	
 	loadSettings()
 	
 	CSGO.initialize()
